@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Senai_Semestre2_Sprint2.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
