@@ -15,7 +15,7 @@ namespace Senai_Semestre2_Sprint2.Repositories
             using (SpMedGroup ctx = new SpMedGroup())
             {
 
-                Usuarios usuario = ctx.Usuarios.Include(n => n.Permicao).ToList().Find(x => x.Email == login.Email);
+                Usuarios usuario = ctx.Usuarios.ToList().Find(x => x.Email == login.Email);
 
                 return usuario;
                 

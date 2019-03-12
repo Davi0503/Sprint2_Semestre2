@@ -50,7 +50,7 @@ namespace Senai_Semestre2_Sprint2
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "SPMEDGROUp", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Senai_Semestre_Sprint2", Version = "v1" });
             });
 
             //Implementa autenticação
@@ -95,7 +95,7 @@ namespace Senai_Semestre2_Sprint2
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "SPmedgroup");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Senai_Semestre_Sprint2");
             });
 
             app.UseAuthentication();

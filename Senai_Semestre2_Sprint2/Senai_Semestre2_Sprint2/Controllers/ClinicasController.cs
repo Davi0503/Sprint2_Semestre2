@@ -10,7 +10,7 @@ using Senai_Semestre2_Sprint2.Interfaces;
 using Senai_Semestre2_Sprint2.Repositories;
 
 namespace Senai_Semestre2_Sprint2.Controllers
-{   [Authorize(Roles = "1")]
+{   [Authorize(Roles = "administrador")]
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
@@ -24,7 +24,7 @@ namespace Senai_Semestre2_Sprint2.Controllers
             _ClinicasRepository = new ClinicasRepository();
         }
 
-        
+
         [HttpGet]
         public IActionResult Listar()
         {
