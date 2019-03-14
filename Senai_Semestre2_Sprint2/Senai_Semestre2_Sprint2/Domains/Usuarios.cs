@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Senai_Semestre2_Sprint2.Domains
 {
@@ -12,8 +13,11 @@ namespace Senai_Semestre2_Sprint2.Domains
         }
 
         public int Id { get; set; }
+        [Required(ErrorMessage = "Email inválido")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "Senha inválida")]
         public string Senha { get; set; }
+        [Required(ErrorMessage = "Permicao inválida")]
         public string Permicao { get; set; }
 
         public ICollection<Medicos> Medicos { get; set; }

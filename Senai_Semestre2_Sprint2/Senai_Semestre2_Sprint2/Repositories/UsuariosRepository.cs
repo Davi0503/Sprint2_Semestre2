@@ -21,12 +21,25 @@ namespace Senai_Semestre2_Sprint2.Repositories
                 
             }
 
+        }
 
+        public Usuarios VerificarSeExiste(string email)
+        {
 
+            using (SpMedGroup ctx = new SpMedGroup())
+            {
+
+                Usuarios usuario = ctx.Usuarios.ToList().Find(x => x.Email == email);
+
+                return usuario;
+                
+            }            
         }
 
         public void Cadastrar(Usuarios usuario)
         {
+            Usuarios usuarioCadastro = VerificarSeExiste(usuario.Email);
+
             using (SpMedGroup ctx = new SpMedGroup())
             {
 

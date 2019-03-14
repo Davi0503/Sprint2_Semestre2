@@ -12,5 +12,6 @@ namespace Senai_Semestre2_Sprint2.Repositories
         void Cadastrar(Usuarios usuario);
         List<Usuarios> Listar();
         Usuarios BuscarPorEmail(LoginDTO login);
+        Usuarios VerificarSeExiste(string email);
     }
 }
