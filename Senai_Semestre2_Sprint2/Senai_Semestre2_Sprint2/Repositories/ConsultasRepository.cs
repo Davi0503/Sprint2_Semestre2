@@ -60,7 +60,7 @@ namespace Senai_Semestre2_Sprint2.Repositories
 
                 }else if(tipoUsuario == "paciente")
                 {
-                    return ctx.Consultas.Where(x => x.IdMedicos == Id).ToList();
+                    return ctx.Consultas.Where(x => x.IdPaciente == Id).ToList();
 
 
                 }
