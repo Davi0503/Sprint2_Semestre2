@@ -40,13 +40,18 @@ namespace Senai_Semestre2_Sprint2.Repositories
         {
             Usuarios usuarioCadastro = VerificarSeExiste(usuario.Email);
 
-            using (SpMedGroup ctx = new SpMedGroup())
+            if (usuarioCadastro == null)
             {
 
-                ctx.Usuarios.Add(usuario);
-                ctx.SaveChanges();
+                using (SpMedGroup ctx = new SpMedGroup())
+                {
 
+                    ctx.Usuarios.Add(usuario);
+                    ctx.SaveChanges();
+
+                }
             }
+
         }
 
         public List<Usuarios> Listar()
